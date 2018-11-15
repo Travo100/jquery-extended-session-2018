@@ -9,7 +9,6 @@ var total = 0;
 var timer = 10;
 var timerId;
 
-
 $(".game-container").hide();
 
 $("#start").on("click", function(){
@@ -22,7 +21,6 @@ $("#start").on("click", function(){
         timer--;
         $("#timer-text").text(timer);
         if(timer === 0) {
-            alert("times up!");
             timer = 10;
         }
     }, 1000); 
@@ -40,9 +38,7 @@ $("#start").on("click", function(){
 
     $(".start-container").hide();
     $(".game-container").show();
-})
-
-
+});
 
 $(document).on("click", ".crystal-btn", function(){
     total += parseInt($(this).val());
